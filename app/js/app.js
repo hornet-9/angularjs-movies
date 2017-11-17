@@ -18,13 +18,7 @@ config(['$routeProvider', function($routeProvider) {
     when("/movies/search/:query", { templateUrl: "partials/movieSearch.html", controller: "movieSearchController"}).
     when("/movies/:opening_date/:title", { templateUrl: "partials/movie.html", controller: "movieController"}).
 		otherwise({redirectTo: '/movies'});
-}]).
-config(['$httpProvider', function($httpProvider) {
-    if (!$httpProvider.defaults.headers.get) {
-        $httpProvider.defaults.headers.get = {};    
-    }    
-}]).
-filter('trusted', ['$sce', function ($sce) {
+}]).filter('trusted', ['$sce', function ($sce) {
     return function(url) {
         return $sce.trustAsResourceUrl(url);
     };
