@@ -1,0 +1,28 @@
+
+<table class="all-movies">
+	<thead>
+		<tr>
+			<td>Title</td>
+			<td colspan="2">Review headline</td>
+		</tr>
+	</thead>
+	<tbody class="pointer">
+			<tr ng-repeat="movie in movies | filter: searchFilter | orderBy: 'display_title'" ng-click="attachLink(movie.opening_date, movie.display_title)" class="animate-repeat">
+				<td>
+					<p ng-bind-html="movie.display_title"></p>
+				</td>
+				<td colspan="{{movie.multimedia ? '1' : '2'}}">
+					<p ng-bind-html="movie.headline | formatSummary"></p>
+				</td>
+				<td ng-show="movie.multimedia">
+					<img ng-src={{movie.multimedia.src}} />
+				</td>
+		
+			</tr>
+	</tbody>
+</table>
+
+<div class="grey-highlight pointer" ng-show="offset >= 20" ng-click="nextPage(false)"><span>Previous Page</span></div>
+<div class="grey-highlight pointer" ng-show="movies.has_more" ng-click="nextPage(true)"><span>Next Page</span></div>
+
+<p class="none-found" ng-show="!(movies | filter: searchFilter).length && noMoviesFlag">No movies found! Please search again.</p>

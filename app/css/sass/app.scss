@@ -1,0 +1,181 @@
+@import 'slider-button';
+@import 'animate';
+
+$lightgrey: #f2f2f2;
+$darkgrey: #ddd;
+
+body {
+  width: 60%;
+  margin: auto;
+  font-family: 'Ledger', serif;
+  font-size: 10pt;
+  overflow-y: scroll;
+}
+
+h1, h2, form, input {
+  text-align: center;
+}
+
+section {
+  border: 1px solid $darkgrey;
+  border-radius: 20px;
+  padding: 1% 8% 4%;
+  margin-bottom: 3%;
+}
+
+input {
+  border-radius: 5px;
+  padding: 6px;
+  font-family: 'Ledger', serif;
+  outline: none;
+  width: 40%;
+}
+
+input[type="month"] {
+  width: 140px;
+  margin-left: 5px;
+}
+
+::-webkit-calendar-picker-indicator {
+    display: none;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+.subheader {
+  margin-bottom: 20px;
+  line-height: 35px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.all-movies {
+  width: 100%;
+  thead {
+    background-color: $lightgrey;
+    td {
+      padding-left: 10px;
+      &:first-child {
+        width: 30%;
+      }
+    }
+  }
+  tbody {
+    tr {
+      height: 100px;
+      &:nth-child(even){
+        background-color: $lightgrey;
+      }
+      &:hover {
+        background-color: $darkgrey;
+      }
+    }
+    td {
+      img {
+        height: 100px;
+        display: block;
+        float: right;
+      }
+      p {
+        margin: 0 10px;
+      }
+    }
+  }
+}
+
+.movie-img {
+  img {
+    display: block;
+    margin: 10px auto;
+    border: 4px solid $darkgrey;
+    height: 125px;
+  }
+}
+
+.back {
+  text-align:right;
+  font-weight: bold;
+  margin: 10px 0;
+  a {
+    text-decoration: none;
+    color: black;
+  }
+}
+
+.grey-highlight {
+  text-align: center;
+  margin: 15px 0;
+  span {
+    background-color: $darkgrey;
+    padding: 5px 15px;
+    border-radius: 10px;
+  }
+}
+
+.single-movie {
+  width: 100%;
+  td {
+    background-color: $lightgrey;
+  }
+    p {
+      margin: 10px;
+    }
+}
+.read-review {
+  a {
+    color: inherit;
+  }
+}
+
+.none-found {
+  font-weight: bold;
+  text-align: center;
+  margin-top: 30px;
+}
+
+@media only screen and (max-width: 1200px) {
+  .subheader {
+    display: block;
+    span {
+      display: block;
+      text-align: center;
+    }
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  body {
+    width: 80%;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  body {
+    width: 95%;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .all-movies {
+    thead {
+      display: none;
+    }
+    tbody {
+      tr {
+        &:nth-child(even){
+          background-color: #fff;
+        }
+        &:nth-child(odd){
+          background-color: $lightgrey;
+        }
+        td {
+          &:nth-child(2) {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}

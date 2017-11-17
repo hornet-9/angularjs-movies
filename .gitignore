@@ -1,0 +1,12 @@
+/node_modules
+
+/test
+/logs
+/scripts
+/config
+/app/lib
+
+
+angularjs-movies.sublime*
+
+.TODO

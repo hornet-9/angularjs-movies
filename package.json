@@ -1,0 +1,49 @@
+{
+  "_from": "angularjs-seed",
+  "_id": "angularjs-seed@1.2.0",
+  "_inBundle": false,
+  "_integrity": "sha1-MUMzKp+29sQ8/vq6oWH+x2RFIjw=",
+  "_location": "/angularjs-seed",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "tag",
+    "registry": true,
+    "raw": "angularjs-seed",
+    "name": "angularjs-seed",
+    "escapedName": "angularjs-seed",
+    "rawSpec": "",
+    "saveSpec": null,
+    "fetchSpec": "latest"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/angularjs-seed/-/angularjs-seed-1.2.0.tgz",
+  "_shasum": "3143332a9fb6f6c43cfefabaa161fec76445223c",
+  "_spec": "angularjs-seed",
+  "_where": "C:\\wamp64\\www",
+  "bugs": {
+    "url": "https://github.com/angular/angular-seed/issues"
+  },
+  "bundleDependencies": false,
+  "deprecated": false,
+  "description": "A starter project for angular js",
+  "devDependencies": {
+    "karma": "*",
+    "karma-jasmine": "*",
+    "karma-junit-reporter": "*",
+    "karma-ng-scenario": "*",
+    "phantomjs": "*"
+  },
+  "homepage": "https://github.com/angular/angular-seed#readme",
+  "license": "MIT",
+  "name": "angularjs-seed",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/angular/angular-seed.git"
+  },
+  "version": "1.2.0",
+  "dependencies": {
+  }
+}

@@ -1,0 +1,12 @@
+
+<h2 ng-model="dateText">Movies released {{dateText}}</h2>
+<div class="subheader">
+	<span>Only show critic's picks
+		<label class="switch">
+		  <input type="checkbox" ng-model="criticsChoiceFilter">
+		  <span class="slider round"></span>
+		</label>
+	</span>
+	<span>Show reviews from different month&nbsp;<input type="month" value="{{dateRange}}" placeholder="YYYY-MM" ng-change="changeDates()" ng-model="dateRange"/></span>
+</div>
+<movie-list movies="movies"></movie-list>

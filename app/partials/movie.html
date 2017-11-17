@@ -1,0 +1,36 @@
+<div class="back pointer" onclick="window.history.back()">« Back to list</div>
+<div class="movie-img" ng-show=movie.multimedia><img ng-src={{movie.multimedia.src}} /></div>
+<div class="grey-highlight" ng-show=movie.critics_pick><span>Critic's Pick!</span></div>
+<table class="single-movie">
+	<tbody>
+		<tr>
+			<td><p>Title</p></td>
+			<td><p>{{movie.display_title}}</p></td>
+		</tr>
+		<tr>
+			<td><p>Rating</p></td>
+			<td><p>{{movie.mpaa_rating}}</p></td>
+		</tr>
+		<tr>
+			<td><p>Headline</p></td>
+			<td><p>{{movie.headline}}</p></td>
+		</tr>
+		<tr>
+			<td><p>Reviewer</p></td>
+			<td><p>{{movie.byline}}</p></td>
+		</tr>
+		<tr>
+			<td><p>Summary</p></td>
+			<td><p>{{movie.summary_short}}</p></td>
+		</tr>
+		<tr>
+			<td><p>Review Published</p></td>
+			<td><p>{{movie.publication_date | date:'d MMMM yyyy'}}</p></td>
+		</tr>
+		<tr>
+			<td><p>Movie Release Date</p></td>
+			<td><p>{{movie.opening_date | date:'d MMMM yyyy'}}</p></td>
+		</tr>
+	</tbody>
+</table>
+<h2 class="read-review"><a ng-href={{movie.link.url}} target="_blank">Read The New York Times Review</a></h2>
