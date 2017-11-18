@@ -36,6 +36,9 @@
     "karma-ng-scenario": "*",
     "phantomjs": "*"
   },
+  "scripts": {
+  "start": "node scripts/web-server.js"
+},
   "homepage": "https://github.com/angular/angular-seed#readme",
   "license": "MIT",
   "name": "angularjs-seed",
