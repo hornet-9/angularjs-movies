@@ -1,8 +1,5 @@
 'use strict';
 
-// The main application module can be thought of as the entry point to an app, the equivalent of a ‘main’ function.
-// Recommended a module for each feature/reusable component and a main application module with initialisation code
-// and dependencies on the sub-modules.
 
 angular.module('MovieReviewsApp', [
   'ngRoute',
@@ -10,7 +7,8 @@ angular.module('MovieReviewsApp', [
   'ngSanitize',
   'MovieReviewsApp.controllers',
   'MovieReviewsApp.directives',
-  'MovieReviewsApp.services'
+  'MovieReviewsApp.services',
+  'angular-toArrayFilter'
 ]).
 config(['$routeProvider', function($routeProvider) {
 	$routeProvider.

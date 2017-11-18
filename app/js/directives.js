@@ -8,7 +8,7 @@ angular.module('MovieReviewsApp.directives', []).
             restrict: 'E',
             templateUrl:"partials/movieTable.html",
 		    link: function(scope, elem, attrs){
-		      scope.movies = attrs;
+		      scope.movies.push[attrs];
 		    }
         }
     });

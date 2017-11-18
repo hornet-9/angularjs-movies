@@ -36,6 +36,11 @@ input[type="month"] {
   margin-left: 5px;
 }
 
+table {
+  border-collapse: separate;
+  border-spacing: 2px;
+}
+
 ::-webkit-calendar-picker-indicator {
     display: none;
 }

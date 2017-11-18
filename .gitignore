@@ -1,12 +1,11 @@
-/node_modules
-
-/test
-/logs
-/scripts
-/config
-/app/lib
-
+logs/*
+!.gitkeep
+node_modules/
+bower_components/
+e2e-tests/
+tmp
+.DS_Store
+.idea
 
 angularjs-movies.sublime*
-
-.TODO
+movies.sublime*

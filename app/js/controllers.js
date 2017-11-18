@@ -7,7 +7,7 @@ angular.module('MovieReviewsApp.controllers', []).
 		$scope.dateText = "this month";
 
 		// Use previous search parameters if we have them
-	    $scope.dateRange = pageState.dateRange || new Date().toISOString().substring(0,7);
+	    $scope.dateRange = pageState.dateRange || new Date();
    		$scope.offset = pageState.offset || 0;
 		$scope.pageState = pageState;
 
@@ -15,7 +15,7 @@ angular.module('MovieReviewsApp.controllers', []).
 			$scope.pageState.dateRange = $scope.dateRange;
 			$scope.pageState.offset = $scope.offset;
 
-		    moviesAPIservice.getMovies($scope.dateRange, $scope.offset)
+		    moviesAPIservice.getMovies($scope.dateRange.toISOString().substring(0,7), $scope.offset)
 		    .success(function (response) {
 		        $scope.movies = response.results;
 		        $scope.movies.has_more = response.has_more;
