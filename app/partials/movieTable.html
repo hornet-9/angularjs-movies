@@ -7,8 +7,9 @@
 		</tr>
 	</thead>
 	<tbody class="pointer">
-			<tr ng-repeat="movie in movies | filter: searchFilter | orderBy: 'display_title'" ng-click="attachLink(movie.opening_date, movie.display_title)" class="animate-repeat">
+			<tr ng-repeat="movie in movies | filter: searchFilter | orderBy: 'display_title'" ng-click="linkToMovie(movie.opening_date, movie.display_title)" class="animate-repeat">
 				<td>
+					<!-- Using ng-bind-html to protect against HTML characters returned by api -->
 					<p ng-bind-html="movie.display_title"></p>
 				</td>
 				<td colspan="{{movie.multimedia ? '1' : '2'}}">
