@@ -9,7 +9,7 @@
     "repository": "https://github.com/angular/angular-seed",
     "license": "MIT",
     "dependencies": {
-        "bower": "^1.7.7",
+        "bower": "^1.8.8",
         "ecstatic": "^3.3.2",
         "http-server": "^0.12.0"
     },
