@@ -14,7 +14,7 @@ factory('moviesAPIservice', function($http) {
     moviesAPI.getMovie = function(opening_date, title) {
         // Include opening date (if it exists) to avoid other movies with same name
         const dateSearch = !opening_date ? '&opening-date=' + opening_date : '';
-            return $http({ method: 'GET', url: 'https://api.nytimes.com/svc/movies/v2/reviews/search.json?api-key=L7YZGa8N4GrfDcoicrL4ICAqLTaQQgJj&query=\'' + title + '\'' + dateSearch});
+            return $http({ method: 'GET', url: 'https://api.nytimes.com/svc/movies/v2/reviews/search.json?api-key=L7YZGa8N4GrfDcoicrL4ICAqLTaQQgJj&query=\'' + decodeURIComponent(title) + '\'' + dateSearch});
     }
 
     moviesAPI.movieSearch = function(searchText, offset) {
