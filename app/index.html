@@ -19,7 +19,7 @@
   <section ngCloak>
     <h2>Search for review by movie keyword</h2>
     <form class="form">
-      <input type="search" ng-model="movieSearchText" ng-change="searchMovies(movieSearchText)" ng-model-options='{ debounce: 5000 }' autocomplete="off">
+      <input type="search" ng-model="movieSearchText" ng-change="searchMovies(movieSearchText)" ng-model-options='{ debounce: 500 }' autocomplete="off">
       <input type="reset" value="clear">
     </form>
   </section>
